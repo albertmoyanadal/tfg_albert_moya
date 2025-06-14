@@ -1,33 +1,46 @@
-# Predicció de la Freqüència Cardíaca en Entrenaments de Ciclisme
+# Predicció de la freqüència cardíaca en entrenaments de ciclisme
 
 Aquest projecte forma part del Treball de Fi de Grau (TFG) i té com a objectiu desenvolupar i comparar diferents models de Machine Learning per predir la freqüència cardíaca durant entrenaments de ciclisme utilitzant dades reals d'activitats esportives.
 
-## Descripció
+## Objectiu
 
-La predicció de la freqüència cardíaca és una eina valuosa per a ciclistes i entrenadors, ja que permet optimitzar entrenaments, prevenir sobreentrenament i millorar el rendiment esportiu. En aquest projecte s'han implementat i comparat diversos models de predicció automàtica de la freqüència cardíaca:
+L'objectiu principal és desenvolupar models que permetin predir la freqüència cardíaca (`heart_rate`) d'un esportista a partir de dades recollides durant sessions de ciclisme. Les variables d'entrada utilitzades són:
 
-- **MLP (Multi-Layer Perceptron):** Un perceptró multicapa bàsic per a la predicció seqüencial.
-- **Xarxes Neuronals Recurrents (RNN):** Per capturar la dependència temporal inherent en les dades d'entrenament.
-- **LSTM (Long Short-Term Memory):** Un tipus avançat de RNN que millora la capacitat de recordar patrons temporals a llarg termini.
+- `power` (potència)
+- `cadence` (cadència)
+- `rolling_ave_alt` (altitud mitjana mòbil)
+- `heart_rate` (freqüència cardíaca, com a target)
 
-## Objectius
+Les dades s'obtenen de fitxers `.csv` provinents de dispositius de monitorització d'entrenaments ciclistes.
 
-- Analitzar i pre-processar dades d'entrenaments de ciclisme.
-- Implementar diferents arquitectures de xarxes neuronals per a la predicció de la freqüència cardíaca.
-- Avaluar i comparar el rendiment dels models utilitzant mètriques específiques.
+## Tecnologies i llibreries
 
-## Estructura del Projecte
+El projecte està desenvolupat en Python i fa ús, entre d'altres, de les següents llibreries:
 
-- `data/` — Dades d'entrenaments de ciclisme (pre-processades i/o brutes).
-- `models/` — Implementacions dels diferents models de ML (MLP, RNN, LSTM).
-- `notebooks/` — Jupyter notebooks per a l'anàlisi exploratòria, entrenament i visualització de resultats.
-- `src/` — Codi font auxiliar per a pre-processament, entrenament, i avaluació.
-- `results/` — Resultats de les proves i comparació de models.
+- [Keras](https://keras.io/) i [TensorFlow](https://www.tensorflow.org/) per la creació i entrenament de models de deep learning.
+- [NumPy](https://numpy.org/) i [Pandas](https://pandas.pydata.org/) per al processament i manipulació de dades.
+- [Matplotlib](https://matplotlib.org/) per la visualització i generació de gràfics.
 
-## Requisits
+## Estructura del projecte
 
-- Python 3.8+
-- Llibreries principals: `numpy`, `pandas`, `scikit-learn`, `tensorflow` / `keras`, `matplotlib`
+El projecte s'organitza en dos grans blocs:
+
+### 1. Anàlisi exploratòria de dades (EDA) i model naïve
+
+- Exploració i neteja de les dades.
+- Visualització gràfica de les variables principals.
+- Matriu de correlacions per entendre la relació entre variables.
+- Creació d’un model naïve bàsic com a benchmark inicial.
+
+### 2. Models de deep learning
+
+S'implementen i s'avaluen tres tipus de models:
+
+- **Multi-Layer Perceptron (MLP)**
+- **Recurrent Neural Network (RNN)**
+- **Long-Short Term Memory (LSTM)**
+
+Per cada model es detalla la construcció, entrenament, i avaluació dels resultats.
 
 ## Autor
 
@@ -38,3 +51,6 @@ Albert Moya Nadal — [GitHub](https://github.com/albertmoyanadal)
 *TFG - Grau en Matemàtiques*  
 *Universitat de les Illes Balears*  
 *2025*
+
+
+
