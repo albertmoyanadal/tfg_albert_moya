@@ -1,20 +1,20 @@
 ==================================================
 AVERAGE PERFORMANCE OVER 20 BATCHES:
-- Mean MAE: 8.1 bpm
-- Mean Std of Error: 9.4 bpm
-- Mean Max Error: 23.4 bpm
+- Mean MAE: 10.0 bpm
+- Mean Std of Error: 11.2 bpm
+- Mean Max Error: 25.2 bpm
 ==================================================
 
 ==================================================
 AVERAGE PERFORMANCE OVER 20 BATCHES:
 - Mean MAE: 1.5 bpm
-- Mean Std of Error: 1.5 bpm
+- Mean Std of Error: 1.6 bpm
 - Mean Max Error: 7.0 bpm
 ==================================================
 
 ==================================================
 AVERAGE PERFORMANCE OVER 20 BATCHES:
-- Mean MAE: 1.5 bpm
-- Mean Std of Error: 1.5 bpm
-- Mean Max Error: 7.4 bpm
+- Mean MAE: 1.9 bpm
+- Mean Std of Error: 2.1 bpm
+- Mean Max Error: 9.8 bpm
 ==================================================
